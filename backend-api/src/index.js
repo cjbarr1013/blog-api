@@ -1,6 +1,9 @@
 import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
+// import User from './models/user.js';
+// import Post from './models/post.js';
+// import Comment from './models/comment.js';
 
 // app initialization
 const app = express();
@@ -16,10 +19,19 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // routes
-app.get('/', (req, res) => {
-  res.json({
-    message: 'HELLO!',
-  });
-});
+// app.post('/user', async (req, res) => {
+//   try {
+//     const user = await User.create({
+//       username: 'billybob2',
+//       password: 'Password123!',
+//     });
+
+//     res.json({
+//       user,
+//     });
+//   } catch (err) {
+//     res.json({ err });
+//   }
+// });
 
 export default app;
